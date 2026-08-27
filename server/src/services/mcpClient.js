@@ -38,7 +38,7 @@ async function startConnection() {
     command, 
     args,
     options: {
-      cwd: "C:/Study/Projects/mcp-web-scraper",
+      cwd: process.cwd(),
       env: { ...process.env }
     }
   });
