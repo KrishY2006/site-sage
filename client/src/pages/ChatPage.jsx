@@ -71,7 +71,7 @@ export default function ChatPage() {
     setLoading(true);
 
     try {
-      const res = await fetch(`http://localhost:4000/api/projects/${id}/chat`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/projects/${id}/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
