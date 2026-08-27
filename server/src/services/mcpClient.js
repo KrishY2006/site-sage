@@ -27,7 +27,7 @@ function splitCliArgs(raw) {
 }
 
 async function startConnection() {
-  const command = process.env.MCP_SCRAPER_CMD;
+  const command = process.env.MCP_SCRAPER_CMD || 'python';
   if (!command) {
     throw new Error('MCP_SCRAPER_CMD environment variable is not set');
   }
